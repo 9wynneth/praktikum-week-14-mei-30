@@ -1,7 +1,7 @@
 ﻿
 namespace praktikum_week_14_mei_30
 {
-    partial class Form1
+    partial class FormTeam
     {
         /// <summary>
         /// Required designer variable.
@@ -191,7 +191,7 @@ namespace praktikum_week_14_mei_30
             this.dataGV_latestMatch.Size = new System.Drawing.Size(644, 352);
             this.dataGV_latestMatch.TabIndex = 84;
             // 
-            // Form1
+            // FormTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,9 +211,9 @@ namespace praktikum_week_14_mei_30
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Prev);
             this.Controls.Add(this.btn_First);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "FormTeam";
+            this.Text = "Form Team";
+            this.Load += new System.EventHandler(this.FormTeam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGV_latestMatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

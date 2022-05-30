@@ -16,7 +16,7 @@ namespace praktikum_week_14_mei_30
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormTeam());
         }
     }
 }

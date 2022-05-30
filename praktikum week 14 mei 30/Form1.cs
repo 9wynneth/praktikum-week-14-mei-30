@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace praktikum_week_14_mei_30
 {
-    public partial class Form1 : Form
+    public partial class FormTeam : Form
     {
-        public Form1()
+        public FormTeam()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace praktikum_week_14_mei_30
 
         int posisiSekarang = 0;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormTeam_Load(object sender, EventArgs e)
         {
             sqlQuery = "SELECT t.team_name, Concat(m.manager_name, ' (', n.nation,')'), Concat(t.home_stadium, ', ', t.city, ' (', t.capacity, ')'), t.team_id FROM team t, manager m, nationality n WHERE t.manager_id = m.manager_id and m.nationality_id = n.nationality_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
