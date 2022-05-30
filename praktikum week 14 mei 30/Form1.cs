@@ -71,7 +71,7 @@ namespace praktikum_week_14_mei_30
             lbl_worstDiscipline.Text=$"{dtTeamDetailWorstDiscipline.Rows[0][0].ToString()}, {dtTeamDetailWorstDiscipline.Rows[0][1].ToString()} Yellow Card and {dtTeamDetailWorstDiscipline.Rows[0][2]} Red Card";
 
             dtDGVmatch = new DataTable();
-            sqlQuery = $"SELECT date_format(m.match_date, '%d/%m/%Y') as 'match_date', if (m.team_home = 'A001', 'HOME', 'AWAY') as 'Home/Away', if (m.team_home = 'A001', m.team_away, m.team_home) as 'lawan', if (goal_home is null or goal_away is null, 'belum berlangsung', concat(m.goal_home, ' - ', m.goal_away))as 'score' from `match` m where m.team_home = '{teamID}' or m.team_away = '{teamID}' order by m.match_date desc limit 5; ";
+            sqlQuery = $"SELECT date_format(m.match_date, '%d/%m/%Y') as 'match_date', if(m.team_home='{teamID}', 'HOME', 'AWAY') as 'Home/Away', concat('vs ',if(m.team_home='{teamID}', (select t.team_name from team t where t.team_id = m.team_away), (select t.team_name from team t where t.team_id = m.team_home)))as 'lawan', if (goal_home is null or goal_away is null, 'belum berlangsung', concat(m.goal_home, ' - ', m.goal_away))as 'score' FROM `match` m WHERE m.team_home = '{teamID}' or m.team_away = '{teamID}' ORDER BY m.match_date desc limit 5; "; 
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtDGVmatch);
