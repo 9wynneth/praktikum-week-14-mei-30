@@ -188,14 +188,14 @@ namespace praktikum_week_14_mei_30
             this.dataGV_latestMatch.Name = "dataGV_latestMatch";
             this.dataGV_latestMatch.RowHeadersWidth = 62;
             this.dataGV_latestMatch.RowTemplate.Height = 28;
-            this.dataGV_latestMatch.Size = new System.Drawing.Size(644, 225);
+            this.dataGV_latestMatch.Size = new System.Drawing.Size(644, 352);
             this.dataGV_latestMatch.TabIndex = 84;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 566);
+            this.ClientSize = new System.Drawing.Size(800, 693);
             this.Controls.Add(this.dataGV_latestMatch);
             this.Controls.Add(this.lbl_topScorer);
             this.Controls.Add(this.lbl_worstDiscipline);
